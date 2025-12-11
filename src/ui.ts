@@ -1,5 +1,4 @@
 
-
 const crearParrafo = (texto: string): HTMLParagraphElement => {
   const p = document.createElement("p");
   p.innerText = texto;
@@ -10,6 +9,13 @@ const crearImagen = (url: string): HTMLImageElement => {
   const img = document.createElement("img");
   img.src = url;
   img.classList.add("imagen-extraida");
+
+  //Placeholder por si falla la imagen
+  img.onerror =  () => {
+    img.src = "image-not-found.webp";
+    img.classList.add("placeholder-img");
+  };
+
   return img;
 };
 

@@ -26,9 +26,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
 h1 {
@@ -83,6 +82,75 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.pagina{
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+}
+
+.busqueda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#input-busqueda {
+  width: calc(342px * 3 + 2 * 1.5rem);
+  max-width: 100%;
+  height: 400px;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#input-busqueda::placeholder {
+  text-align: center;
+}
+
+#boton-buscar {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contenedor-img-urls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.div-img {
+  display: flex;
+  flex-direction: column;
+  width: 342px;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+.imagen-extraida,
+.placeholder-img {
+  width: 342px;
+  height: 297px; 
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #fafafa;
+  display: block;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -93,5 +161,17 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contenedor-img-urls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .contenedor-img-urls {
+    grid-template-columns: 1fr;
   }
 }

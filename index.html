@@ -7,12 +7,16 @@
     <title>Proyecto-11-B REGEX</title>
   </head>
   <body>
-    <div id="contenedor-general">
-      <h2>Pegue el HTML</h2>
-      <input type="text" id="input-busqueda" placeholder="Pegue aquí el código"/>
-      <div id="boton"><button id="boton-extraer" class="boton-extraer">Extraer Imágenes</button></div>
-      <div id="urls"></div>
+    <div class="pagina">
+      <div id="contenedor-general">
+        <h2>Pegue el HTML</h2>
+        <div class="busqueda">
+          <textarea id="input-busqueda" placeholder="Pegue aquí el código"></textarea>
+          <button id="boton-extraer" class="boton-extraer">Extraer Imágenes</button>
+        </div> 
+        <div id="urls"></div>
+      </div>
+      <script type="module" src="/src/main.ts"></script>
     </div>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
