@@ -1,4 +1,6 @@
 import "./style.css";
 import { main } from "./motor";
 
-main();
+document.addEventListener('DOMContentLoaded', () => {
+    main();
+})

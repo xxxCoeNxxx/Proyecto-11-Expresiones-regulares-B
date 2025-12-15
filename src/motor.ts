@@ -37,8 +37,11 @@ export const main = () => {
   const contenedor = mostrarEnlaces(urls);
   
   const divUrls = document.getElementById("urls");
-  if (divUrls !== null) {
-    divUrls.innerHTML = "";
-    divUrls?.appendChild(contenedor);
+
+  if (!(divUrls instanceof HTMLDivElement)) {
+    throw new Error("No se encontró el div #urls")
   }
+
+  divUrls.innerHTML = "";
+  divUrls.appendChild(contenedor);
 };
